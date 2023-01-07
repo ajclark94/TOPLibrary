@@ -1,3 +1,6 @@
+const myLibrary = [];
+const newBook = document.querySelector('');
+
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -5,16 +8,11 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-Book.prototype.info = () => {
-  let status;
-  if (this.read === true) {
-    status = 'have';
-  } else {
-    status = 'have not';
-  }
-  return `${this.title}, written by ${this.author}. It is ${this.pages} pages long and I ${status} read this book`;
-};
+function addBook() {
+
+}
 
 const book1 = new Book('The Hobbit', 'JRR Tolkien', 129, true);
-
-console.log(book1.info());
+const book2 = new Book('The Fellowship of the Ring', 'JRR Tolkien', 500, true);
+myLibrary.push(book1);
+myLibrary.push(book2);
